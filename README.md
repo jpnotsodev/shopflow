@@ -1,3 +1,34 @@
+## Clone the repository
+
+```bash
+git clone https://github.com/jpnotsodev/shopflow.git
+cd ~/shopflow
+```
+
+## Setup the virtual environment
+
+To create a virtual environment:
+```bash
+python3 -m venv .venv
+```
+
+Activate the virtual environment:
+```bash
+source .venv/bin/activate
+```
+
+## Install the required packages
+
+Inside the virtual environment, run the following command:
+```bash
+(.venv)/home/administrator/shopflow$ /bin/bash install_requirements.sh
+```
+
+Activate the virtual environment:
+```bash
+source .venv/bin/activate
+```
+
 ## Verify the installed packages
 
 ```bash
@@ -41,4 +72,8 @@ Output:
     297 Lahore
     276 Toronto
       1 city
+```
+
+```bash
+python3 -c "import os; print([(file, os.stat(os.path.join('data/raw/orders', dir, file)).st_size) for dir in os.listdir('data/raw/orders/') for file in os.listdir(f'data/raw/orders/{dir}')])"
 ```
