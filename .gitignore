@@ -3,3 +3,6 @@ sources/
 data/
 *.duckdb
 airflow/
+__pycache__/
+dags/__pycache__/
+staging/__pycache__/
