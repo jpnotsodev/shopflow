@@ -43,7 +43,7 @@ def generate_mock_products():
                         "name": f"{random_category} {i}",
                         "sku": f"SKU-00{i:02}",
                         "category": random_category,
-                        "price": f"{random.uniform(420, 5000):.2f}"}
+                        "price": round(random.uniform(420, 5000), 2)}
         products.append(product_json)
     (SOURCES_DIR / filename).write_text(json.dumps(products, indent=4))
 
